@@ -1,0 +1,151 @@
+/* fonts */
+@font-face {
+    font-family: 'Figtree';
+    src: url(assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
+:root {
+    /* clr */
+    --clr-yellow: hsl(47, 88%, 63%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-gray-500: hsl(0, 0%, 42%);
+    --clr-gray-950: hsl(0, 0%, 7%);
+
+    /* ff */
+    --ff-main: 'Figtree', sans-serif;
+
+    /* fs */
+    --fs-main: 0.9rem;
+    --fs-headings: 1.5rem;
+
+    /* fw */
+    --fw-main: 500;
+    --fw-headings: 800;
+}
+
+/* reset */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* styling */
+body {
+    font-family: var(--ff-main);
+    font-size: var(--fs-main);
+    font-weight: var(--fw-main);
+    background-color: var(--clr-yellow);
+}
+
+.card {
+    background-color: var(--clr-white);
+    border: solid var(--clr-gray-950) 0.1rem;
+    border-radius: 1.2rem;
+    box-shadow: 0.5rem 0.5rem var(--clr-gray-950);
+    max-width: 24rem;
+    margin: 14.25rem 0 0 0;
+}
+
+.card-body {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.course-image {
+    display: block;
+    max-width: 100%;
+    border-radius: 2.1rem;
+    padding: 1.45rem;
+}
+
+.tag {
+    color: var(--clr-gray-950);
+    background-color: var(--clr-yellow);
+    border-radius: 0.2rem;
+    padding: 0.3rem 0.7rem;
+    margin: 0 0 0.9rem 0;
+    max-width: fit-content;
+    font-weight: var(--fw-headings);
+}
+
+.date{
+    margin: 0 0 1rem 0;
+}
+
+.title{
+    font-weight: var(--fw-headings);
+    color: var(--clr-gray-950);
+    margin: 0 0 1.05rem 0;
+    font-size: var(--fs-headings);
+    cursor: pointer;
+}
+
+.title:hover {
+    color: var(--clr-yellow);
+}
+
+.paragraph{
+    color: var(--clr-gray-500);
+    margin: 0 0 1.35rem 0;
+    line-height: 1.55rem;
+}
+
+.by {
+    margin: 0 0 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.by img{
+    max-width: 2rem;
+}
+
+.by p{
+    color: var(--clr-gray-950);
+    font-weight: var(--fw-headings);
+    margin: 0 0 0 0.65rem;
+}
+
+/* layout */
+.wrapper {
+    display: grid;
+    place-items: center;
+}
+
+@media(max-width: 500px) {
+    .card {
+        margin: 9.78rem 1.5rem;
+        border-radius: 1.5rem;
+    }
+    .course-image {
+        padding: 0 1.5rem;
+        height: 12.6rem;
+        object-fit: cover;
+        margin: 1.37rem 0 1.4rem 0;
+    }
+
+    .tag {
+        padding: 0.4rem 0.74rem;
+        margin: 0 0 0.82rem 0;
+        font-size: 0.75rem;
+    }
+
+    .date {
+        font-size: 0.75rem;
+        margin: 0 0 1.1rem 0;
+    }
+
+    .title{
+        margin: 0 0 0.925rem 0;
+        white-space: nowrap;
+        font-size: 1.25rem;
+    }
+
+    .paragraph {
+        line-height: 1.3rem;
+        margin: 0 0 1.5rem 0;
+        font-size: 0.875rem;
+    }
+}
